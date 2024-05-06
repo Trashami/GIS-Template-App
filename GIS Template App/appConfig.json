@@ -7,27 +7,21 @@
         "layers": [
             {
                 "type": "FeatureLayer",
-                "title": "Hazardous Materials Facilities",
-                "url": "https://ehost.tularecounty.ca.gov/ehost/rest/services/EnvironmentalHealth/Hazardous_Materials_Facilities/FeatureServer",
+                "title": "Tourist Attractions",
+                "url": "https://services6.arcgis.com/Do88DoK2xjTUCXd1/arcgis/rest/services/OSM_NA_Tourism/FeatureServer",
                 "clusterEnabled": true,
                 "isOnByDefault": true,
-                "viewOrder": 1
+                "viewOrder": 1,
+                "symbology": "not set"
             },
             {
                 "type": "FeatureLayer",
-                "title": "Parcels",
-                "url": "https://services2.arcgis.com/bYBANhmQGwSSLC0l/arcgis/rest/services/Public_Parcels/FeatureServer/0",
+                "title": "Beer-Places",
+                "url": "https://services2.arcgis.com/bYBANhmQGwSSLC0l/arcgis/rest/services/Beer/FeatureServer",
                 "clusterEnabled": false,
                 "isOnByDefault": false,
-                "viewOrder": 2
-            },
-            {
-                "type": "FeatureLayer",
-                "title": "Fire-Hydrants",
-                "url": "https://ihost.tularecounty.ca.gov/ihost/rest/services/Hosted/Hydrants_View/FeatureServer",
-                "clusterEnabled": false,
-                "isOnByDefault": false,
-                "viewOrder": 3
+                "viewOrder": 2,
+                "symbology": "not set"
             },
             {
                 "type": "ImageryLayer",
@@ -35,16 +29,10 @@
                 "url": "https://landscape11.arcgis.com/arcgis/rest/services/USA_Flood_Hazard_Areas/ImageServer",
                 "clusterEnabled": false,
                 "isOnByDefault": false,
-                "viewOrder": 10
-            },
-            {
-                "type": "FeatureLayer",
-                "title": "School-Sites",
-                "url": "https://ihost.tularecounty.ca.gov/ihost/rest/services/Hosted/SchoolSites/FeatureServer",
-                "clusterEnabled": false,
-                "isOnByDefault": false,
-                "viewOrder": 5
+                "viewOrder": 10,
+                "symbology": "not set"
             }
+
         ]
     },
     "developerKeys": {
