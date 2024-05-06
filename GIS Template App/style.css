@@ -1,0 +1,161 @@
+
+@import "https://js.arcgis.com/4.29/@arcgis/core/assets/esri/themes/light/main.css";
+html,
+body {
+
+}
+
+#viewDiv {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+
+}
+
+calcite-loader {
+  align-self: center;
+  justify-self: center;
+}
+
+calcite-label {
+  --calcite-label-margin-bottom: 0px;
+}
+
+#header-title {
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
+#info-content {
+  padding: 0.75rem;
+}
+
+calcite-rating {
+  margin-top: 0.25rem;
+}
+
+#header {
+  display: flex;
+  padding: 0 1rem;
+  background-color: var(--calcite-color-foreground-1);
+}
+
+#header-controls {
+  margin-inline-start: auto;
+  align-self: center;
+}
+
+#search-container {
+  display: flex;
+  width: 100%;
+  height: 155px !important;
+  align-items: baseline;
+}
+
+.esri-ui-top-left.esri-ui-corner {
+  left: 45px;
+}
+
+
+.label-wrapper {
+  display: flex;
+  padding: 0.55rem;
+  border: 1px solid var(--calcite-color-border-1);
+  cursor: pointer;
+}
+
+calcite-switch {
+  margin: 0 0.5rem;
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+.feature-card {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);  /* Subtle shadow for depth */
+  border: 1px solid #e1e1e1;                /* Lighter border */
+  margin: 10px 10px 10px 0;                  /* Slightly tighter spacing */
+  padding: 10px;                             /* Padding inside the card */
+  background-color: #ffffff;                 /* Bright white background */
+  font-family: 'Segoe UI', sans-serif;       /* SharePoint default font */
+  color: #333333;                            /* Darker text for better readability */
+  border-radius: 4px;                        /* Rounded corners */
+  transition: transform 0.3s, box-shadow 0.3s; /* Smooth transitions for hover effects */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;            /* Ensures content is spaced out vertically */
+}
+
+.feature-card h3 {
+  margin: 0;     /* Removes default margin */
+  font-size: 1.5em; /* Larger heading size */
+}
+
+.feature-card p {
+  margin: 1px 0;  /* Reduces space between paragraphs */
+  padding: 0;     /* Removes any padding */
+}
+
+.feature-card:hover {
+  transform: translateY(-3px);               /* Slight lift effect on hover */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); /* Enhanced shadow on hover */
+}
+
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.vanilla:hover {
+  filter: drop-shadow(0 0 2em #f7df1eaa);
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+button:hover {
+  border-color: #646cff;
+}
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+  a:hover {
+    color: #747bff;
+  }
+  button {
+    background-color: #f9f9f9;
+  }
+}
