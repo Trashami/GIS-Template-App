@@ -44,7 +44,11 @@ export function handleMapClick(view) {
 }
 
 export function initializeMapInteractions(view, layers) {
-    console.log("Initializing map interactions for layers:", layers.map(l => l.title));
-    setupPopups(view, layers);
-    handleMapClick(view);
+    //console.log("Initializing map interactions for layers:", layers.map(l => l.title));
+    try {
+        setupPopups(view, layers);
+        handleMapClick(view);
+    } catch (error) {
+        console.error("Error initializing map interactions:", error);
+    }
 }
