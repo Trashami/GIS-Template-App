@@ -18,10 +18,13 @@ export default defineConfig({
                     src: 'node_modules/@arcgis/core/assets/esri/themes/dark/main.css',
                     dest: 'public/assets/esri-themes/dark/',
                     rename: 'main.css'
+                },
+                {
+                    src: './appConfig.json', 
+                    dest: 'dist/'
                 }
             ],
 
-            copyOnce: true
         })
     ],
     resolve: {

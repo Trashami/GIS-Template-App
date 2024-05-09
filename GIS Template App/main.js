@@ -5,6 +5,7 @@ import { loadWidgets, setWidgetsView, setupActionBar } from "./src/config/SetupW
 import { setupAuthentication } from "./src/config/ManageAccess";
 import { setupDarkModeSwitch } from "./src/config/UIManager";
 
+
 //setup calcite components
 import { setAssetPath } from "@esri/calcite-components/dist/components";
 
@@ -86,12 +87,12 @@ async function initializeApplication() {
       return;
   }
 
-  try{ 
-    let activeView = viewManagement.getActiveView();
-    await loadLayers(activeView, config);
-} catch (error) {
-    console.error("Error loading layers:", error);
-} 
+  try { 
+        let activeView = viewManagement.getActiveView();
+        await loadLayers(activeView, config);
+    } catch (error) {
+        console.error("Error loading layers:", error);
+    } 
 
   try {
     setupDarkModeSwitch(viewManagement.getActiveView);

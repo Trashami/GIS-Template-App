@@ -1,6 +1,7 @@
 import FeatureLayer from "@arcgis/core/layers/FeatureLayer";
 import ImageryLayer from "@arcgis/core/layers/ImageryLayer";
 
+
 function createLayer(layerConfig) {
     try {
         switch (layerConfig.type) {
@@ -44,6 +45,7 @@ export function loadLayers(activeView, config) {
             if (layer) {
                 activeView.map.add(layer);
                 console.log(`Added layer: ${layerConfig.title}`);
+
             } else {
                 console.log(`Failed to add layer (layer creation failed): ${layerConfig.title}`);
             }

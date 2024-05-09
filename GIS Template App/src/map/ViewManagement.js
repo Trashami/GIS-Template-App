@@ -1,5 +1,6 @@
 import { loadLayers } from "./LoadLayers";
 import { setWidgetsView } from '../config/SetupWidgets'; 
+import { initializeMapInteractions } from "./MapInteractions";
 
 export const layerVisibility = {};
 
@@ -20,6 +21,9 @@ export async function initializeViews(mapView, sceneView, widgets, defaultActive
             newActiveView.container = "viewDiv";
             (newActiveView === mapView ? sceneView : mapView).container = null;
             setWidgetsView(widgets, newActiveView); 
+            activeView.when(() => {
+            initializeMapInteractions(newActiveView, newActiveView.map.layers.items);
+            });
         } catch (error) {
             console.error("Error setting active view:", error);
         }
@@ -105,6 +109,7 @@ function switchToSceneView(mapView, sceneView, newView, config, widgets) {
             applyLayerVisibility(newView);
             sceneView.goTo(currentExtent).catch(err => console.error("Failed to sync views:", err));
             setWidgetsView(widgets, sceneView); 
+            initializeMapInteractions(sceneView, sceneView.map.layers.items);
         });
     } catch (error) {
         console.error("Error switching to scene view:", error);
@@ -126,6 +131,8 @@ function switchToMapView(mapView, sceneView, newView, config, widgets) {
             applyLayerVisibility(newView);
             mapView.goTo(currentExtent).catch(err => console.error("Failed to sync views:", err));
             setWidgetsView(widgets, mapView);
+            initializeMapInteractions(mapView, mapView.map.layers.items);
+
         });
     } catch (error) {
         console.error("Error switching to map view:", error);
