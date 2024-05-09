@@ -1,13 +1,15 @@
 import PopupTemplate from '@arcgis/core/PopupTemplate';
 
-function formatPopupContent(fields) {
-    return fields.map(field => {
+function formatPopupContent(fields, view) {
+    let content = fields.map(field => {
         if (field.name.toLowerCase().includes("url")) {
-            return `<b>${field.alias}</b>: <a href="{${field.name}}" target="_blank">{${field.name}}</a>`; 
+            return `<b>${field.alias}</b>: <a href="{${field.name}}" target="_blank">{${field.name}}</a>`;
         }
         return `<b>${field.alias}</b>: {${field.name}}`;
     }).join("<br>");
+    return content;
 }
+
 
 export function setupPopups(view, layers) {
     layers.forEach(layer => {
